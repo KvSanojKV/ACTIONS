@@ -17,5 +17,5 @@ jobs:
     #     run: ls 
     #   - name: Read files
     #     run: cat README.md
-        - name: Execute cowsay CMD
-          run: cowsay -f dragon "Run for cover, I am a dragon ... RAWR" >> dragon.txt
+       - name: Execute cowsay CMD
+         run: cowsay -f dragon "Run for cover, I am a dragon ... RAWR" >> dragon.txt
