@@ -24,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: list files
-        run: ls -ltr
+        run: ls -ltr dragon.txt
   deploy_job:
     runs-on: ubuntu-latest
     steps:
