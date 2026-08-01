@@ -9,6 +9,8 @@ jobs:
      steps:
        - name: Checkout repo
          uses: actions/checkout@v7
+       - name: install cowsay
+         run: sudo apt-get install cowsay -y
        - name: build app
          run: cowsay -f dragon "Run for cover, I am a dragon ... RAWR" >> dragon.txt
      #  - name: Executing shell script.
