@@ -13,6 +13,11 @@ jobs:
          run: sudo apt-get install cowsay -y
        - name: build app
          run: cowsay -f dragon "Run for cover, I am a dragon ... RAWR" >> dragon.txt
+       - name: uplaod files
+         uses: actions/upload-artifact@v7
+         with:
+          name: my-artifact
+          path: dragon.txt
      #  - name: Executing shell script.
     #     run: sh ./script.sh
          
@@ -24,6 +29,10 @@ jobs:
     needs: build_job
     runs-on: ubuntu-latest
     steps:
+      - name: dowload file
+        uses: actions/download-artifact@v7
+        with:
+         name: my-artifact
       - name: list files
         run: ls -ltr dragon.txt
   deploy_job:
