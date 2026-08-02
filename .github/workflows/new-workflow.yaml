@@ -5,4 +5,4 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: List the current directory
-              run: ls
+              run: ls -ltr
