@@ -15,4 +15,17 @@ jobs:
             - name: list the containers
               run: docker ps
             - name: browser nginx
-              run: curl localhost:8080
+              run: curl localhost:8080 > output.txt
+            - name: uplaod files
+              uses: actions/upload-artifact@v7
+              with:
+              name: my-artifact
+              path: output.txt
+    test_jobs:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Download the files
+          uses: actions/download-artifact@v7
+              with:
+              name: my-artifact
+          
