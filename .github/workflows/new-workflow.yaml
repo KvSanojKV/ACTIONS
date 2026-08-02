@@ -19,13 +19,13 @@ jobs:
             - name: uplaod files
               uses: actions/upload-artifact@v7
               with:
-              name: my-artifact
-              path: output.txt
+                name: my-artifact
+                path: output.txt
     test_jobs:
       runs-on: ubuntu-latest
       steps:
-        - name: Download the files
-          uses: actions/download-artifact@v7
+            - name: Download the files
+              uses: actions/download-artifact@v7
               with:
-              name: my-artifact
+               name: my-artifact
           
