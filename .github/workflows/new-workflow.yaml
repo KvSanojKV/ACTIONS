@@ -4,5 +4,7 @@ jobs:
     build_job:
         runs-on: ubuntu-latest
         steps:
-            - name: List the current directory
-              run: ls -ltr
+            - name: Checkout repo
+              uses: actions/checkout@v7
+            - name: build docker image
+              run: docker build -t .
