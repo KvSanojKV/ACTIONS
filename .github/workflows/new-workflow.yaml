@@ -29,4 +29,5 @@ jobs:
               uses: actions/download-artifact@v7
               with:
                name: my-artifact
-          
+            - name: display the website content
+              run: cat output.txt
