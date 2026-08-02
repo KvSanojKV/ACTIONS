@@ -14,3 +14,5 @@ jobs:
               run: docker run -d --name my-container -p 8080:80 my-app:latest
             - name: list the containers
               run: docker ps
+            - name: browser nginx
+              run: curl localhost:8080
