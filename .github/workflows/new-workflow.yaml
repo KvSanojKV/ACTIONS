@@ -3,5 +3,6 @@ on: push
 jobs:
     build_job:
         runs-on: ubuntu-latest
-        - name: List the current directory
-          run: pwd
+        steps:
+            - name: List the current directory
+              run: pwd
