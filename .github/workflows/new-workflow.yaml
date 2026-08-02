@@ -9,4 +9,4 @@ jobs:
             - name: list files
               run: ls -ltr
             - name: build docker image
-              run: docker build -t .
+              run: docker build -t my-app .
