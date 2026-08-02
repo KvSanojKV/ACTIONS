@@ -10,6 +10,7 @@ jobs:
               run: ls -ltr
             - name: build docker image
               run: docker build -t my-app .
-            - name: list the images
-              run: docker images
-              
+            - name: run the images
+              run: docker run -d --name my-container -p 8080:80 my-app:latest
+            - name: list the containers
+              run: docker ps
