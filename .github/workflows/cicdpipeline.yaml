@@ -21,3 +21,8 @@ jobs:
       with:
         push: true
         tags: sanojkv/testapp:latest
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: deploy the image
+        run: docker run -d --name my-app -p 8080:80 sanojkv/testapp:latest
