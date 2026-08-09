@@ -1,8 +1,9 @@
 name: Test pipeline working
 on: push
 jobs:
-    stpes:
+    build:
         runs-on: ubuntu-latest
-        
+        steps:
+
         - name: Create a file
           run: touch test.txt
