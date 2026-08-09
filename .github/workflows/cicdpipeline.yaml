@@ -6,9 +6,9 @@ jobs:
     steps:
     - name: build docker image and push
       uses: docker/login-action@v4
-        with:
-          username: ${{ vars.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      with:
+        username: ${{ vars.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_TOKEN }}
     -
       name: Set up QEMU
       uses: docker/setup-qemu-action@v4
