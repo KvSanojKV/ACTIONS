@@ -7,3 +7,5 @@ jobs:
 
         - name: Create a file
           run: touch test.txt
+        - name: list file
+          run: ls -ltr
