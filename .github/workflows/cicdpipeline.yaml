@@ -28,4 +28,4 @@ jobs:
       - name: deploy the image
         run: docker run -d --name my-app -p 8080:80 sanojkv/testapp:latest
       - name: Check the docker container running
-        run: docker ps
+        run: curl localhost:8080
