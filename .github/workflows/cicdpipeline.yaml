@@ -2,5 +2,7 @@ name: Test pipeline working
 on: push
 jobs:
     stpes:
+        runs-on: ubuntu-latest
+        
         - name: Create a file
           run: touch test.txt
