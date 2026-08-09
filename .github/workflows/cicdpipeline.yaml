@@ -3,5 +3,6 @@ on: push
 jobs:
   build:
     runs-on: ubuntu-latest
+    steps:
     - name: Create a file
       run: touch test.txt
