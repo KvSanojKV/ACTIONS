@@ -1,11 +1,7 @@
-name: Test pipeline working
+name: pipeline test
 on: push
 jobs:
-    build:
-        runs-on: ubuntu-latest
-        steps:
-
-        - name: Create a file
-          run: touch test.txt
-        - name: list file
-          run: ls -ltr
+  build:
+    runs-on: ubuntu-lates
+    - name: Create a file
+      run: touch test.txt
