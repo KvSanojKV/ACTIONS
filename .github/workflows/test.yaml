@@ -2,6 +2,6 @@ name: Revise pipeline knowledge
 on: push
 jobs:
     test-job:
-        runs-on: ubuntu-latest:
+        runs-on: ubuntu-latest
             - name: check uptime of runner
               run: uptime
