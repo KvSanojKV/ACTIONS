@@ -7,7 +7,7 @@ jobs:
             - name: check uptime of runner
               run: uptime
             - name: create a file
-              run: touch test.txt
+              run: echo "test" > test.txt
             - name: list the files and content
               run: |
                ls -ld
