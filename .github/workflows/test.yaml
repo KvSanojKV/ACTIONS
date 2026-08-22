@@ -1,14 +1,8 @@
-name: Revise pipeline knowledge
+name: test pipeline
 on: push
 jobs:
-    test-job:
-        runs-on: ubuntu-latest
-        steps:
-            - name: check uptime of runner
-              run: uptime
-            - name: create a file
-              run: echo "test" > test.txt
-            - name: list the files and content
-              run: |
-               ls -ld
-               cat test.txt
+  build-job
+  runs-on: ubuntu-latest
+  steps:
+    - name: Check uptime of runner
+      run: uptime
