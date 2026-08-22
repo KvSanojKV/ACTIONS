@@ -9,8 +9,9 @@ jobs:
     - name: create a file
       run: echo "test" > text.txt
   test-job:
+    needs: build-job
     runs-on: ubuntu-latest
     steps:
-      
+
     - name: read file
       run: cat text.txt
