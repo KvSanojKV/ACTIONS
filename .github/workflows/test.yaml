@@ -8,6 +8,12 @@ jobs:
       run: uptime
     - name: create a file
       run: echo "test" > text.txt
+    - name: upload artifacts
+      uses: actions/upload-artifact@v7
+      with: 
+        name: my-a
+        path: text.txt
+    
   test-job:
     needs: build-job
     runs-on: ubuntu-latest
