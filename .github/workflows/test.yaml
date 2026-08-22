@@ -6,3 +6,7 @@ jobs:
     steps:
     - name: Check uptime of runner
       run: uptime
+    - name: create a file
+      run: echo "test" > text.txt
+    - name: read file
+      run: cat text.txt
