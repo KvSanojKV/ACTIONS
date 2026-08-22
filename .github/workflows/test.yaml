@@ -1,7 +1,7 @@
 name: test pipeline
 on: push
 jobs:
-  build-job
+  build-job:
     runs-on: ubuntu-latest
     steps:
     - name: Check uptime of runner
