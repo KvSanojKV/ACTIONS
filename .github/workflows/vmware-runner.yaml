@@ -1,0 +1,8 @@
+name: VMWARE runner
+on: push
+jobs:
+    build-job:
+        runs-on: self-hosted
+        steps:
+            - name: check hostname and uptime
+              run: hostname;uptime
