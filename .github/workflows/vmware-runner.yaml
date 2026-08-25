@@ -32,6 +32,6 @@ jobs:
 
             - name: Deploy to minikube
               run: |
-              kubectl apply -f service.yaml
-              kubectl apply -f deployment.yaml
+                kubectl apply -f service.yaml
+                kubectl apply -f deployment.yaml
               
