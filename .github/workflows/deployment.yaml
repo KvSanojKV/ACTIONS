@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-vmware
+  labels:
+    app: app-vmware
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: app-vmware
+  template:
+    metadata:
+      labels:
+        app: app-vmware
+    spec:
+      containers:
+        - name: app-vmware
+          image: sanojkv/app-vmware:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+              

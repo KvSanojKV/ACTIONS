@@ -25,4 +25,11 @@ jobs:
             with:
              push: true
              tags: sanojkv/app-vmware:latest
+    deploy-job:
+        runs-on: self-hosted
+        needs: build-job
+        name: Deploy to minikube
+        run: |
+         kubectl apply -f service.yaml
+         kubectl apply -f deployment.yaml
               
