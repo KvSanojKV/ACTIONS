@@ -29,7 +29,8 @@ jobs:
         runs-on: self-hosted
         needs: build-job
         steps:
-
+            - name: Checkout repo
+              uses: actions/checkout@v7
             - name: Deploy to minikube
               run: |
                 kubectl apply -f service.yaml
