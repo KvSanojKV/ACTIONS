@@ -7,7 +7,7 @@ jobs:
             - name: check hostname and uptime
               run: hostname;uptime
             - name: build docker image and push
-    build-job
+    build-job:
         needs: testhost-job
         runs-on: self-hosted
         steps:
